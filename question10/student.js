@@ -1,4 +1,4 @@
-/ Klassen Student
+// Klassen Student
 
 class Student {
     constructor(name) {

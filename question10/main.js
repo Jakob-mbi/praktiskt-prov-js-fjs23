@@ -4,8 +4,8 @@
 // Skriv även ut studententens kurser (listCourses()) samt information om kurserna (getCourseInfo()).
 // main.js ska vara kopplat till index.html och informationen om studenterna och kurserna ska loggas ut i consolen.
 
-import Student from "./student";
-import Course from "./course";
+import Student from "./student.js";
+import Course from "./course.js";
 
 const student1 = new Student("Sandra");
 const student2 = new Student("Torsten");
