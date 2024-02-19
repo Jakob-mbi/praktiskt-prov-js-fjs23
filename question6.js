@@ -119,7 +119,13 @@ const watchList = [
   function myWatchList(movies) {
 
     // Din kod här:
-
+    const filterdMovies = movies.filter((movie)=>{
+      if(movie.imdbRating>=8.0)
+      {
+        return movie
+      }
+    })
+    return (filterdMovies.map((movie)=>{return {title:movie.Title,rating:movie.imdbRating} }))
   }
 
 

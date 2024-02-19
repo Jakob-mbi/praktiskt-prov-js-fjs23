@@ -6,3 +6,27 @@
 
 // Din kod här
 
+async function renderFetch(){
+    try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const posts = await response.json();
+        const div = document.createElement("div");
+        div.id="posts";
+        document.body.prepend(div);
+        const user1Posts = posts.filter((post)=>{
+            if(post.userId == 1){
+                return post
+            }
+        })
+
+        user1Posts.forEach(element => {
+            div.innerHTML +=`<div><h2>${element.title}</h2><p>${element.body}</p><hr></div>`
+        });
+    }
+    catch(err)
+    {
+        console.log(err.message);
+    }
+ 
+}
+renderFetch();
