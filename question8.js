@@ -9,7 +9,10 @@ const tweets = [
   ];
 
 // Din kod här:
-
+function updatedTweets(tweets){
+  let updatedTweets = tweets.filter((tweet)=> {if(tweet.id !== 823423){return tweet}})
+  return updatedTweets
+}
 
 
 
@@ -19,13 +22,22 @@ const tweets = [
 
 // Din kod här:
 
-
+function tweetsHtml(tweets){
+  const ul = document.createElement("ul");
+      ul.id="tweets";
+      
+  const tweetsHtml = tweets.map((tweet)=>{return `<li>${tweet.text}</li>`})
+  ul.innerHTML = tweetsHtml.join('');
+  document.body.appendChild(ul);
+}
+tweetsHtml(updatedTweets(tweets));
 
 
 
 
 // Test
-console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
+
+console.log(updatedTweets(tweets)); // Ska logga en array utan kommentaren med id 823423
 // [
 //   { text: 'Elon Musk is ...', id: 523423 },
 //   { text: 'The future of AI ...', id: 2039842 },

@@ -12,7 +12,7 @@ async function renderFetch(){
         const posts = await response.json();
         const div = document.createElement("div");
         div.id="posts";
-        document.body.prepend(div);
+        document.body.appendChild(div);
         const user1Posts = posts.filter((post)=>{
             if(post.userId == 1){
                 return post

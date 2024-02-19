@@ -4,3 +4,5 @@
 // Skriv även ut studententens kurser (listCourses()) samt information om kurserna (getCourseInfo()).
 // main.js ska vara kopplat till index.html och informationen om studenterna och kurserna ska loggas ut i consolen.
 
+
+
