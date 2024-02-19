@@ -5,7 +5,10 @@ const getCurrentDateTime = function () {
 };
 
 // Din kod här:
-
+const getCurrentDateTimeArrow = () => {
+  const now = new Date();
+  return now.toLocaleString();
+}
 
 
 //2.2 (1p) Gör om följande funktion till en arrow-funktion:
@@ -15,7 +18,9 @@ function stringIncludes(string, substring) {
 
 // Din kod här:
 
-
+const stringIncludesArrow = (string, substring) => {
+  return string.indexOf(substring) !== -1;
+}
 
 
 //2.3 (1p) Gör om följande funktion till en arrow-funktion:
@@ -26,7 +31,7 @@ const removeNegatives = numbers.filter(function (number) {
 });
 
 // Din kod här:
-
+const removeNegativesArrow = numbers.filter((number) => {return number >= 0;})
 
 
 
@@ -39,12 +44,14 @@ function logMessageLater() {
 }
 
 // Din kod här:
-
+const logMessageLaterArrow = () =>{
+  setTimeout(()=>{console.log("Logged after 2 seconds")}, 2000)
+}
 
 
 
 // Test
-console.log(getCurrentDateTime()); // Ska logga dagens datum och tid
-console.log(stringIncludes("Hello World", "Hello")); // Ska logga true
-console.log(removeNegatives); // Ska logga [1, 2, 3]
-console.log(logMessageLater()); // Ska logga "Logged after 2 seconds" efter 2 sekunder
+console.log(getCurrentDateTimeArrow()); // Ska logga dagens datum och tid
+console.log(stringIncludesArrow("Hello World", "Hello")); // Ska logga true
+console.log(removeNegativesArrow); // Ska logga [1, 2, 3]
+console.log(logMessageLaterArrow()); // Ska logga "Logged after 2 seconds" efter 2 sekunder
